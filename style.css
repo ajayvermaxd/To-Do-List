@@ -1,0 +1,116 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #39b6e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #05162e;
+    margin: 40px 0 20px;
+    font-size: 2.5rem;
+}
+
+#todo-input {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 15px;
+    border-radius: 4px;
+    border: 2px solid #5c6975;
+    font-size: 1rem;
+}
+
+#add-task-btn {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5c6975;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-left: 8px;
+}
+
+#add-task-btn:hover {
+    background-color: #536442;
+    transform: scale(1.20);
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+#task-list li {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: min-content 1fr auto;
+    gap: 15px;
+    align-items: center;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+#task-list li:hover {
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.task-completed .task-text {
+    text-decoration: line-through;
+    color: #a1acb8;
+}
+
+.task-text {
+    word-break: break-all;
+    margin-left: 8px;
+}
+
+.mark-complete {
+    cursor: pointer;
+}
+
+.fas.fa-trash-alt {
+    color: #eb5757;
+}
+
+.fas.fa-edit {
+    color: #f2c94c;
+}
+
+.fas {
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.fas:hover {
+    transform: scale(1.2);
+}
+
+/* Additional hover effects for interactive elements */
+input[type="text"]:hover,
+input[type="text"]:focus,
+button:hover,
+button:focus,
+.mark-complete:hover,
+.mark-complete:focus {
+    border-color: #5c6975;
+}
